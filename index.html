@@ -49,11 +49,7 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         padding: 20px 0;
         position: relative;
-    }
-
-    .slider {
         display: inline-flex;
-        animation: slide 25s linear infinite;  /* Smooth infinite loop */
     }
 
     .slider:hover {
@@ -88,14 +84,6 @@
         color: #333;
     }
 
-    @keyframes slide {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-50%);   /* Ensure continuous loop */
-        }
-    }
       /* slider */
       .about-mf .about-img {
         margin-bottom: 2rem;
@@ -246,6 +234,14 @@
 
 
       /*hovering and link for div*/
+      .resume-wrap {
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .resume-wrap:hover {
+        transform: scale(1.04);
+        box-shadow: 0 8px 32px rgb(239, 239, 12), 0 1.5px 6px rgba(239, 3, 3, 0.981);
+        z-index: 2;
+      }
     </style>
 
   </head>
@@ -370,7 +366,7 @@
                           </span>
                           <span>Software Developer</span></p>
                         <p>
-                          <span class="title-s">Experience: </span> <span>1 Years 3 Months</span></p> <p>
+                          <span class="title-s">Experience: </span> <span id="experience-value"></span></p> <p>
                           <span class="title-s">Address:
                           </span>
                           <span>Bangalore, Karnataka</span></p>
@@ -433,7 +429,7 @@
                   <h1 class="big">About</h1>
                   <h2 class="mb-4">About Me</h2>
 
-                  <p>I’m a Software Engineer specializing in backend development, cloud services, and DevOps. Skilled in Node.js, MongoDB, AWS, and React, I focus on building scalable APIs, optimizing workflows, and ensuring security. Passionate about automation and problem-solving, I thrive on creating efficient, real-world solutions.</p>
+                  <p>I'm a Software Engineer specializing in backend development, cloud services, and DevOps. Skilled in Node.js, MongoDB, AWS, and React, I focus on building scalable APIs, optimizing workflows, and ensuring security. Passionate about automation and problem-solving, I thrive on creating efficient, real-world solutions.</p>
                   <ul class="about-info mt-4 px-md-0 px-2">
                     <li class="d-flex">
                       <span>Profile:</span>
@@ -480,12 +476,12 @@
           <div class="col-md-10 heading-section text-center ftco-animate">
             <h1 class="big big-2">Resume</h1>
             <h2 class="mb-4">Resume</h2>
-            <p>I have hands-on experience in backend development, cloud services, and DevOps, working with Node.js, Java, Python, and React. My expertise includes MongoDB, SQL, AWS (Secrets Manager, LocalStack), and Docker, along with CI/CD pipelines using GitHub Actions. I’ve built and optimized REST APIs, implemented authentication and security best practices, and worked with platforms like Razorpay, and Elastic APM. Additionally, I have experience in file processing, Excel automation, and financial data handling. </p>
+            <p>I have hands-on experience in backend development, cloud services, and DevOps, working with Node.js, Java, Python, and React. My expertise includes MongoDB, SQL, AWS (Secrets Manager, LocalStack), and Docker, along with CI/CD pipelines using GitHub Actions. I've built and optimized REST APIs, implemented authentication and security best practices, and worked with platforms like Razorpay, and Elastic APM. Additionally, I have experience in file processing, Excel automation, and financial data handling. </p>
           </div>
         </div>
         <!-- slider -->
-        <div class="slider-container">
-          <div class="slider">
+        <!-- <div class="slider-container"> -->
+        <div class="slider owl-carousel">
               <!-- Technologies -->
               <div class="slide">
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
@@ -523,7 +519,7 @@
               </div>
       
               <div class="slide">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/aws-original.svg" alt="AWS">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS">
                   <p>AWS</p>
               </div>
       
@@ -531,54 +527,69 @@
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
                   <p>Git</p>
               </div>
+
+              <div class="slide">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot">
+                  <p>Spring Boot</p>
+              </div>
+
+              <div class="slide">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" alt="Kafka">
+                  <p>Kafka</p>
+              </div>
+
+              <div class="slide">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure">
+                  <p>Azure</p>
+              </div>
       
               <!-- Duplicate slides for seamless loop -->
-              <div class="slide">
+              <!-- <div class="slide">
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
                   <p>Node.js</p>
-              </div>
+              </div> -->
       
-              <div class="slide">
+              <!-- <div class="slide">
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
                   <p>JavaScript</p>
-              </div>
+              </div> -->
       
-              <div class="slide">
+              <!-- <div class="slide">
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
                   <p>React</p>
-              </div>
+              </div> -->
 
-              <div class="slide">
+              <!-- <div class="slide">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
                 <p>MongoDB</p>
-            </div>
+            </div> -->
     
-            <div class="slide">
+            <!-- <div class="slide">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
                 <p>Java</p>
-            </div>
+            </div> -->
     
-            <div class="slide">
+            <!-- <div class="slide">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
                 <p>Python</p>
-            </div>
+            </div> -->
 
-            <div class="slide">
+            <!-- <div class="slide">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
               <p>Docker</p>
-          </div>
+          </div> -->
   
-          <div class="slide">
-              <img src="./images/aws.svg" alt="AWS">
+          <!-- <div class="slide">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS">
               <p>AWS</p>
-          </div>
+          </div> -->
 
-          <div class="slide">
+          <!-- <div class="slide">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
             <p>Git</p>
-        </div>
+          </div> -->
       
-          </div>
+      <!-- </div> -->
       </div>
         <!-- slider -->
 
@@ -588,66 +599,53 @@
       </div>
       <br>
       <div class="row">
-          <div class="col-md-6">
-              <div class="resume-wrap ftco-animate">
-                  <span class="date">Sep 2024 - Apr 2025</span>
-                  <h2>Backend Developer Trainee</h2>
-                  <span class="position">Physics Wallah</span>
-                  <p class="mt-4">Contributed to backend development, CI/CD optimization, and API monitoring.
-                      <ul>
-                          <li>Streamlined CI/CD pipelines using GitHub Actions, reducing execution time by 30-45 minutes.</li>
-                          <li>Developed a Node.js API for AWS Secrets Manager to manage secrets in a key-value format.</li>
-                          <li>Designed API-based alerts for APM systems to detect 4XX/5XX errors and latency issues.</li>
-                          <li>Used LocalStack to emulate AWS services, enabling secure of AWS functionalities.</li>
-                      </ul>
-                  </p>
-              </div>
-          </div>
-      
-          <div class="col-md-6">
-              <div class="resume-wrap ftco-animate">
-                  <span class="date">Jan 2024 - Aug 2024</span>
-                  <h2>Software Product Development Intern</h2>
-                  <span class="position">HealthEdge</span>
-                  <p class="mt-4">Worked on Java projects, API testing, and database optimization.
-                      <ul>
-                          <li>Developed and maintained Java code with JUnit tests, increasing code coverage by 30%.</li>
-                          <li>Conducted API testing using SOAPUI, verified 50+ APIs, and reported 25 bugs.</li>
-                          <li>Optimized database queries, improving data retrieval performance by 40%.</li>
-                          <li>Collaborated with cross-functional teams, including developers, testers, and
-                            product managers, to deliver high-quality software.</li>
-                      </ul>
-                  </p>
-              </div>
-          </div>
-      </div>
-      
-
-        <br>
-        <br>
-
-        <div class="row">
-          <h1 class="big-4">Education</h1>
-          <div class="underline"></div>
-        </div>
-        <br>
-
-        <div class="row">
-          <div class="col-md-6">
+          <div class="col">
             <div class="resume-wrap ftco-animate">
-              <span class="date">2020-2024</span>
-              <h2>Bachelor in Electronics and Communication</h2>
-              <span class="position">Bangalore Institute of Technology</span>
-              <p class="mt-4">Grade: First class distinction.</p>
+                <span class="date">May 2025 - Present</span>
+                <h2>Software Engineer</h2>
+                <span class="position">AJIO</span>
+                <p class="mt-4">Working on scalable backend systems, microservices, and cloud integration for e-commerce.
+                    <ul>
+                        <li>Developed and maintained microservices using Java and Spring Boot.</li>
+                        <li>Integrated Kafka for real-time data streaming and event-driven architecture.</li>
+                        <li>Optimized cloud deployments on Azure and AWS for high availability.</li>
+                        <li>Collaborated with cross-functional teams to deliver robust e-commerce features.</li>
+                    </ul>
+                </p>
             </div>
           </div>
-
-          <div class="col-md-6">
+        </div>
+        <div class="row">
+          <div class="col-md-12">
             <div class="resume-wrap ftco-animate">
-              <span class="date">2019-2020</span>
-              <h2>Higher Secondary School <br>CBSE (PCM)</h2>
-              <span class="position">Vidyut Mandal Higher Secondary School</span>
-              <p class="mt-4">Grade: First class distinction.</p>
+                <span class="date">Sep 2024 - Apr 2025</span>
+                <h2>Backend Developer Trainee</h2>
+                <span class="position">Physics Wallah</span>
+                <p class="mt-4">Contributed to backend development, CI/CD optimization, and API monitoring.
+                    <ul>
+                        <li>Streamlined CI/CD pipelines using GitHub Actions, reducing execution time by 30-45 minutes.</li>
+                        <li>Developed a Node.js API for AWS Secrets Manager to manage secrets in a key-value format.</li>
+                        <li>Designed API-based alerts for APM systems to detect 4XX/5XX errors and latency issues.</li>
+                        <li>Used LocalStack to emulate AWS services, enabling secure of AWS functionalities.</li>
+                    </ul>
+                </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="resume-wrap ftco-animate">
+                <span class="date">Jan 2024 - Aug 2024</span>
+                <h2>Software Product Development Intern</h2>
+                <span class="position">HealthEdge</span>
+                <p class="mt-4">Worked on Java projects, API testing, and database optimization.
+                    <ul>
+                        <li>Developed and maintained Java code with JUnit tests, increasing code coverage by 30%.</li>
+                        <li>Conducted API testing using SOAPUI, verified 50+ APIs, and reported 25 bugs.</li>
+                        <li>Optimized database queries, improving data retrieval performance by 40%.</li>
+                        <li>Collaborated with cross-functional teams, including developers, testers, and product managers, to deliver high-quality software.</li>
+                    </ul>
+                </p>
             </div>
           </div>
         </div>
@@ -655,7 +653,7 @@
         <div class="row justify-content-center mt-5">
           <div class="col-md-6 text-center ftco-animate">
             <p>
-              <a href="https://drive.google.com/file/d/19Wcd3hzXpslhuik-9plljb2YjHIn5XQd/view" class="btn btn-primary py-4 px-5">Download CV</a>
+              <a href="https://drive.google.com/file/d/1ZoXQTf_JQy9BGCunUBol3-Rhx-S0KgBd/view?usp=sharing" class="btn btn-primary py-4 px-5">Download CV</a>
             </p>
           </div>
         </div>
@@ -725,236 +723,227 @@
           </div>
         </div>
 
-        <!-- <div class="row d-flex contact-info mb-5">
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-            <div class="align-self-stretch box p-4 text-center">
-              <div class="icon d-flex align-items-center justify-content-center">
-                <span class="icon-map-signs"></span>
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <a href="#" class="full-box-link w-100">
+              <div class="box p-4 text-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                  <span class="icon-map-signs"></span>
+                </div>
+                <h3 class="mb-4">Address</h3>
+                <p>Bangalore, Karnataka</p>
               </div>
-              <h3 class="mb-4">Address</h3>
-              <p>Bangalore, Karnataka</p>
-            </div>
+            </a>
           </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-            <div class="align-self-stretch box p-4 text-center">
-              <div class="icon d-flex align-items-center justify-content-center">
-                <span class="icon-phone2"></span>
+        
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <a href="tel://9131416184" class="full-box-link w-100">
+              <div class="box p-4 text-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                  <span class="icon-phone2"></span>
+                </div>
+                <h3 class="mb-4">Contact Number</h3>
+                <p>+91 9131416184</p>
               </div>
-              <h3 class="mb-4">Contact Number</h3>
-              <p>
-                <a href="tel://9131416184">+91 9131416184</a>
-              </p>
-            </div>
+            </a>
           </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-            <div class="align-self-stretch box p-4 text-center">
-              <div class="icon d-flex align-items-center justify-content-center">
-                <span class="icon-paper-plane"></span>
+        
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <a href="mailto:Sudhansugupta154@gmail.com" class="full-box-link w-100">
+              <div class="box p-4 text-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                  <span class="icon-paper-plane"></span>
+                </div>
+                <h3 class="mb-4">Email Address</h3>
+                <p>Sudhansugupta154@gmail.com</p>
               </div>
-              <h3 class="mb-4">Email Address</h3>
-              <p>
-                <a href="mailto:Sudhansugupta154@gmail.com">Sudhansugupta154@gmail.com</a>
-              </p>
-            </div>
+            </a>
           </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-            <div class="align-self-stretch box p-4 text-center">
-              <div class="icon d-flex align-items-center justify-content-center">
-                <span class="icon-globe"></span>
+        
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <a href="https://drive.google.com/file/d/19Wcd3hzXpslhuik-9plljb2YjHIn5XQd/view" target="_blank" class="full-box-link w-100">
+              <div class="box p-4 text-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                  <span class="icon-globe"></span>
+                </div>
+                <h3 class="mb-4">Download Resume</h3>
+                <p>Click to view</p>
               </div>
-              <h3 class="mb-4">Download Resume</h3>
-              <p>
-                <a href="https://drive.google.com/file/d/19Wcd3hzXpslhuik-9plljb2YjHIn5XQd/view">resumelink</a>
-              </p>
-            </div>
-          </div> -->
+            </a>
+          </div>
+        
+        </div>
+        
 
-          <div class="row d-flex contact-info mb-5">
-  
-            <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
-              <a href="#" class="full-box-link w-100">
-                <div class="box p-4 text-center">
-                  <div class="icon d-flex align-items-center justify-content-center">
-                    <span class="icon-map-signs"></span>
-                  </div>
-                  <h3 class="mb-4">Address</h3>
-                  <p>Bangalore, Karnataka</p>
-                </div>
-              </a>
-            </div>
-          
-            <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
-              <a href="tel://9131416184" class="full-box-link w-100">
-                <div class="box p-4 text-center">
-                  <div class="icon d-flex align-items-center justify-content-center">
-                    <span class="icon-phone2"></span>
-                  </div>
-                  <h3 class="mb-4">Contact Number</h3>
-                  <p>+91 9131416184</p>
-                </div>
-              </a>
-            </div>
-          
-            <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
-              <a href="mailto:Sudhansugupta154@gmail.com" class="full-box-link w-100">
-                <div class="box p-4 text-center">
-                  <div class="icon d-flex align-items-center justify-content-center">
-                    <span class="icon-paper-plane"></span>
-                  </div>
-                  <h3 class="mb-4">Email Address</h3>
-                  <p>Sudhansugupta154@gmail.com</p>
-                </div>
-              </a>
-            </div>
-          
-            <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
-              <a href="https://drive.google.com/file/d/19Wcd3hzXpslhuik-9plljb2YjHIn5XQd/view" target="_blank" class="full-box-link w-100">
-                <div class="box p-4 text-center">
-                  <div class="icon d-flex align-items-center justify-content-center">
-                    <span class="icon-globe"></span>
-                  </div>
-                  <h3 class="mb-4">Download Resume</h3>
-                  <p>Click to view</p>
-                </div>
-              </a>
-            </div>
-          
-          </div>
-          
-
-          <div class="container">
-            <br>
-            <br>
-            <div class="row justify-content-center">
-              <div class="col-md-7 ftco-animate text-center">
-                <h2><span>
-                    Message me
-                  </span>
-                </h2>
-                <div class="que" id="send-message">
-                  <form action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="0577c999-6aa1-4aca-930a-5240bf80fd0e">
-                    <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
-                      <div class="col-12">
-                        <label for="fullname" class="form-label">Full Name
-                          <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="fullname" name="fullname" value="" required="required">
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="email" class="form-label">Email
-                          <span class="text-danger">*</span></label>
-                        <div class="input-group">
-                          <span class="input-group-text">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewbox="0 0 16 16">
-                              <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-                            </svg>
-                          </span>
-                          <input type="email" class="form-control" id="email" name="email" value="" required="required">
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="phone" class="form-label">Phone Number</label>
-                        <div class="input-group">
-                          <span class="input-group-text">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewbox="0 0 16 16">
-                              <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-                            </svg>
-                          </span>
-                          <input type="tel" class="form-control" id="phone" name="phone" value="">
-                        </div>
-                      </div><br>
-                      <div class="col-12">
-                        <label for="subject" class="form-label">Subject
-                          <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="subject" name="subject" value="" required="required">
-                      </div>
-                      <div class="col-12">
-                        <label for="message" class="form-label">Message
-                          <span class="text-danger">*</span></label>
-                        <textarea class="form-control" id="message" name="message" rows="3" required="required"></textarea>
-                      </div>
-                      <div class="col-12">
-                        <div class="d-grid"><br>
-                          <button class="btn btn-primary btn-lg" type="submit">Send Message</button>
-                        </div>
+        <div class="container">
+          <br>
+          <br>
+          <div class="row justify-content-center">
+            <div class="col-md-7 ftco-animate text-center">
+              <h2><span>
+                  Message me
+                </span>
+              </h2>
+              <div class="que" id="send-message">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                  <input type="hidden" name="access_key" value="0577c999-6aa1-4aca-930a-5240bf80fd0e">
+                  <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
+                    <div class="col-12">
+                      <label for="fullname" class="form-label">Full Name
+                        <span class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="fullname" name="fullname" value="" required="required">
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <label for="email" class="form-label">Email
+                        <span class="text-danger">*</span></label>
+                      <div class="input-group">
+                        <span class="input-group-text">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewbox="0 0 16 16">
+                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                          </svg>
+                        </span>
+                        <input type="email" class="form-control" id="email" name="email" value="" required="required">
                       </div>
                     </div>
-                  </form>
-                </div>
+                    <div class="col-12 col-md-6">
+                      <label for="phone" class="form-label">Phone Number</label>
+                      <div class="input-group">
+                        <span class="input-group-text">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewbox="0 0 16 16">
+                            <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                          </svg>
+                        </span>
+                        <input type="tel" class="form-control" id="phone" name="phone" value="">
+                      </div>
+                    </div><br>
+                    <div class="col-12">
+                      <label for="subject" class="form-label">Subject
+                        <span class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="subject" name="subject" value="" required="required">
+                    </div>
+                    <div class="col-12">
+                      <label for="message" class="form-label">Message
+                        <span class="text-danger">*</span></label>
+                      <textarea class="form-control" id="message" name="message" rows="3" required="required"></textarea>
+                    </div>
+                    <div class="col-12">
+                      <div class="d-grid"><br>
+                        <button class="btn btn-primary btn-lg" type="submit">Send Message</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
-            <br>
-            <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-              <li class="ftco-animate normal-txt">Find me on
-              </li>
-              <!-- <li class="ftco-animate"> <a href="https://www.youtube.com/@RishabhMishraOfficial"> <span class="icon-youtube"></span></a> </li> -->
-              <li class="ftco-animate">
-                <a href="https://www.linkedin.com/in/sudhanshu-gupta-815941212/">
-                  <span class="icon-linkedin"></span></a>
-              </li>
-              <li class="ftco-animate">
-                <a href="#">
-                  <span class="icon-twitter"></span></a>
-              </li>
-              <!-- <li class="ftco-animate"> <a href="https://twitter.com/rishabhnmishra"> <span class="icon-facebook"></span></a> </li> -->
-              <li class="ftco-animate">
-                <a href="https://www.instagram.com/sudhansugupta154/">
-                  <span class="icon-instagram"></span></a>
-              </li>
-            </ul>
-            <br>
           </div>
+          <br>
+          <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+            <li class="ftco-animate normal-txt">Find me on
+            </li>
+            <li class="ftco-animate">
+              <a href="https://www.linkedin.com/in/sudhanshu-gupta-815941212/">
+                <span class="icon-linkedin"></span></a>
+            </li>
+            <li class="ftco-animate">
+              <a href="#">
+                <span class="icon-twitter"></span></a>
+            </li>
+            <li class="ftco-animate">
+              <a href="https://www.instagram.com/sudhansugupta154/">
+                <span class="icon-instagram"></span></a>
+            </li>
+          </ul>
+          <br>
         </div>
-      </section>
-
-      <footer class="ftco-footer ftco-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 text-center">
-
-              <p style="display: none;">
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                Copyright &copy;<script>
-                  document.write(new Date().getFullYear());
-                </script>
-                All rights reserved | This template is made with
-                <i class="icon-heart color-danger" aria-hidden="true"></i>
-                by
-                <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              </p>
-            </div>
-          </div>
-        </div>
-      </footer>
-
-      <!-- loader -->
-      <div id="ftco-loader" class="show fullscreen">
-        <svg class="circular" width="48px" height="48px">
-          <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
-          <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg>
       </div>
+    </section>
 
-      <script src="js/jquery.min.js"></script>
-      <script src="js/jquery-migrate-3.0.1.min.js"></script>
-      <script src="js/popper.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-      <script src="js/jquery.easing.1.3.js"></script>
-      <script src="js/jquery.waypoints.min.js"></script>
-      <script src="js/jquery.stellar.min.js"></script>
-      <script src="js/owl.carousel.min.js"></script>
-      <script src="js/jquery.magnific-popup.min.js"></script>
-      <script src="js/aos.js"></script>
-      <script src="js/jquery.animateNumber.min.js"></script>
-      <script src="js/scrollax.min.js"></script>
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
 
-      <script src="js/main.js"></script>
-      <script>
-        function gitClick() {
-          window.location.href = 'https://github.com/sudhanshu154';
-        }
-      </script>
+            <p style="display: none;">
+              Copyright &copy;<script>
+                document.write(new Date().getFullYear());
+              </script>
+              All rights reserved | This template is made with
+              <i class="icon-heart color-danger" aria-hidden="true"></i>
+              by
+              <a href="https://colorlib.com" target="_blank">Colorlib</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-    </body>
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen">
+      <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg>
+    </div>
 
-  </html>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+
+    <script src="js/main.js"></script>
+    <script>
+      function gitClick() {
+        window.location.href = 'https://github.com/sudhanshu154';
+      }
+    </script>
+
+    <script>
+      // Set your experience start date here (YYYY, MM-1, DD)
+      const startDate = new Date(2024, 1, 1); // Example: Jan 1, 2023
+
+      const now = new Date();
+      let years = now.getFullYear() - startDate.getFullYear();
+      let months = now.getMonth() - startDate.getMonth();
+
+      if (months < 0) {
+        years--;
+        months += 12;
+      }
+
+      // Format the experience string
+      let experienceStr = "";
+      if (years > 0) experienceStr += years + (years === 1 ? " Year " : " Years ");
+      if (months > 0) experienceStr += months + (months === 1 ? " Month" : " Months");
+      if (experienceStr === "") experienceStr = "Less than a month";
+
+      document.getElementById("experience-value").textContent = experienceStr.trim();
+    </script> 
+
+    <script>
+      $(document).ready(function(){
+        $('.slider.owl-carousel').owlCarousel({
+          loop: true,
+          margin: 20,
+          autoplay: true,
+          autoplayTimeout: 800, // Faster slide interval (ms)
+          smartSpeed: 400,      // Faster transition speed (ms)
+          autoplayHoverPause: true,
+          responsive: {
+            0: { items: 2 },
+            600: { items: 4 },
+            1000: { items: 6 }
+          }
+        });
+      });
+    </script>
+
+  </body>
+
+</html>
